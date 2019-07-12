@@ -81,7 +81,7 @@ class App extends Component {
           centerComponent={{ text: 'GitHub User', style: { color: '#fff' } }}
           />
         <SearchBar placeholder={'Enter user name'} value={this.state.searchstr} platform={Platform.OS}
-        onClear={()=>this.setState({user:null,repos:null})}
+        onClear={()=>this.setState({user:null,repos:[]})}
         onChangeText={(text)=>this.setState({searchstr:text})} onSubmitEditing={()=>{this.getUser(this.state.searchstr);this.getRepos(this.state.searchstr)}} />
 
         {this.state.user?

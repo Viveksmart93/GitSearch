@@ -47,7 +47,7 @@ class App extends Component {
     .then((response) => response.json())
     .then((responseJson) => {
       if(responseJson.message){
-        this.setState({message:"Username not found"})
+        this.setState({message:"Username not found",isLoading:false});
       }else{
         this.setState({user:responseJson,isLoading:false});
       }
